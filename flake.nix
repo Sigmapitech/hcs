@@ -17,7 +17,8 @@
       {
         formatter = pkgs.nixpkgs-fmt;
 
-        packages = {
+        packages = rec {
+          default = hcs;
           lambdananas = pkgs.haskell.lib.buildStackProject {
             name = "lambdananas";
             src = lambdananas-src;
@@ -25,6 +26,8 @@
 
             buildInputs = [ pkgs.haskell.compiler.integer-simple.ghc884 ];
           };
+
+          hcs = import ./wrapper_script.nix { inherit pkgs lambdananas; };
         };
       });
 }
