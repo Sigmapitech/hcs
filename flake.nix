@@ -4,7 +4,7 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     lambdananas-src = {
-      url = "git+ssh://git@github.com/Epitech/lambdananas";
+      url = "github:Epitech/lambdananas/v2.4.3.2";
       flake = false;
     };
   };
@@ -22,7 +22,7 @@
           lambdananas = pkgs.haskell.lib.buildStackProject {
             name = "lambdananas";
             src = lambdananas-src;
-            version = "2.0.0";
+            version = "v2.4.3.2";
 
             buildInputs = [ pkgs.haskell.compiler.integer-simple.ghc884 ];
           };
