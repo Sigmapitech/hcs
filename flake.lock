@@ -30,6 +30,7 @@
       },
       "original": {
         "owner": "Epitech",
+        "ref": "v2.4.3.2",
         "repo": "lambdananas",
         "type": "github"
       }
