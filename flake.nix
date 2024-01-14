@@ -4,7 +4,7 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     lambdananas-src = {
-      url = "git+ssh://git@github.com/Epitech/lambdananas";
+      url = "github:Epitech/lambdananas";
       flake = false;
     };
   };

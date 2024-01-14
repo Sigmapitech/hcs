@@ -23,15 +23,15 @@
       "locked": {
         "lastModified": 1704287368,
         "narHash": "sha256-QeOLhDAC0MTCQI1zFFGzJVdRUyRiLRb3XYlGJv0Zu5I=",
-        "ref": "refs/heads/main",
+        "owner": "Epitech",
+        "repo": "lambdananas",
         "rev": "8bfa58513b210785a8e1349037067cefb1bb827a",
-        "revCount": 217,
-        "type": "git",
-        "url": "ssh://git@github.com/Epitech/lambdananas"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/Epitech/lambdananas"
+        "owner": "Epitech",
+        "repo": "lambdananas",
+        "type": "github"
       }
     },
     "nixpkgs": {
