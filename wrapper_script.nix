@@ -17,6 +17,7 @@
     -not -path "*/bonus/*"             \
     -not -path "*/tests/*"             \
     -not -path "*/*build/*"            \
+    -not -path "*/Setup.hs"            \
     -name "*.hs"                       \
   | ${lambdananas}/bin/lambdananas-exe \
     2>&1                               \
