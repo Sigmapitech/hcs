@@ -18,23 +18,6 @@
         "type": "github"
       }
     },
-    "lambdananas-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1704287368,
-        "narHash": "sha256-QeOLhDAC0MTCQI1zFFGzJVdRUyRiLRb3XYlGJv0Zu5I=",
-        "owner": "Epitech",
-        "repo": "lambdananas",
-        "rev": "8bfa58513b210785a8e1349037067cefb1bb827a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Epitech",
-        "ref": "v2.4.3.2",
-        "repo": "lambdananas",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1720535198,
@@ -54,7 +37,6 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "lambdananas-src": "lambdananas-src",
         "nixpkgs": "nixpkgs"
       }
     },
