@@ -19,7 +19,7 @@
     -not -path "*/*build/*"            \
     -not -path "*/Setup.hs"            \
     -name "*.hs"                       \
-  | ${lambdananas}/bin/lambdananas-exe \
+  | ${lambdananas}/bin/lambdananas     \
     2>&1                               \
     | sed "s|$project_dir/||"          \
     | tee /dev/stderr | wc -l
