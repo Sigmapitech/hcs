@@ -11,6 +11,7 @@
   echo "Running norm in $project_dir"
   count=$(find "$project_dir"          \
     -type f                            \
+    -not -path "*/.direnv/*"           \
     -not -path "*/.git/*"              \
     -not -path "*/.idea/*"             \
     -not -path "*/.vscode/*"           \
