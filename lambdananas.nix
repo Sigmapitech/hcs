@@ -1,7 +1,15 @@
-{ stdenv, fetchurl, lib, gmp, glibc, makeWrapper }:
+{
+  lib,
+  stdenv,
+  fetchurl,
+  gmp,
+  glibc,
+  makeWrapper,
+  withGlibc ? false
+}:
 
 stdenv.mkDerivation (finalAttrs: {
-  name = "lambdanans";
+  name = "lambdananas";
   version = "2.4.3.2";
 
   src = let
@@ -18,11 +26,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontUnpack = true;
   sourceRoot = ".";
-  
+
   nativeBuildInputs = [ makeWrapper ];
 
   installPhase = let
-    ld-lib-path = lib.makeLibraryPath [ gmp glibc ];
+    ld-lib-path = lib.makeLibraryPath ([ gmp ]
+      ++ (lib.optionals withGlibc [ glibc ]));
   in ''
     install -m755 -D $src $out/bin/lambdananas
 

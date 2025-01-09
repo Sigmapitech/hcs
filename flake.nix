@@ -12,11 +12,16 @@
       {
         formatter = pkgs.nixpkgs-fmt;
 
-        packages = rec {
+        packages = let
+          mk-script = lambdananas:
+            import ./wrapper_script.nix { inherit pkgs lambdananas; };
+        in rec {
           default = hcs;
           lambdananas = pkgs.callPackage ./lambdananas.nix { };
+          lambdananas-glibc = lambdananas.override { withGlibc = true; };
 
-          hcs = import ./wrapper_script.nix { inherit pkgs lambdananas; };
+          hcs = mk-script lambdananas;
+          hcs-glibc = mk-script lambdananas-glibc;
         };
       });
 }
